@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>My Page</title>
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+.topnav
+{
+	overflow:hidden;
+	background-color:yellow;
+}
+.topnav a
+{
+	float:left;
+	display:block;
+	color:red;
+	padding:10px 20px;
+}
+.topnav a:hover
+{
+	background-color:green;
+	color:black;
+}
+.topnav .icon
+{
+	display:none;
+}
+.abc
+{
+	height:1000px;
+	width:auto;
+	background-color:orange;
+	display:block;
+}
+.abc.rr
+{
+	display:none;
+}
+.xyz
+{
+	height:1000px;width:auto;background:blue;display:block;
+}
+.xyz.rr
+{
+	display:none;
+}
+.pqr
+{
+	height:1000px;width:auto;background:pink;display:block;
+}
+.pqr.rr
+{
+	display:none;
+}
+@media screen and (max-width:600px)
+{
+	.topnav a:not(:First-child)
+	{
+		display:none;
+	}
+	.topnav .icon
+	{
+		display:block;	
+	}
+
+}
+@media screen and (max-width:600px)
+{
+	.topnav.res
+	{
+		position:relative;
+	}
+	.topnav.res.icon
+	{
+		position:absolute;
+		top:0;
+		right:0;
+	}
+	.topnav.res a
+	{
+		float:none;
+		display:block;
+	}
+
+	
+}
+
+
+</style>
+</head>
+<body>
+
+<div class="topnav" id="nav">
+	<a href="javascript:void(0);" class="icon" onclick="myfun()"><i class="fa fa-bars"></i></a>
+	<a href="javascript:void(0);" onclick="myfunh()">Home</a>
+	<a href="javascript:void(0);" onclick="myfunv()">Contact Us</a>
+	<a href="javascript:void(0);" onclick="myfuna()">About Us</a>
+	<!-- <a href="">login</a> -->
+
+
+</div>
+<div class="xyz" id="aa">
+	THIS IS MY HOME PAGE GUYS....
+</div>
+<div class="abc" id="pq">
+
+	THIS IS MY 	CONATCT PAGE GUYS....
+</div>
+<div class="pqr" id="pp">
+
+	THIS IS MY about PAGE GUYS....
+</div>
+<script>
+function myfun()
+{
+	var x=document.getElementById("nav");
+	if(x.className==="topnav")
+	{
+		x.className+=" res";
+	}
+	else
+	{
+		x.className=="topnav";
+	}
+}
+function myfunh()
+{
+	var x=document.getElementById("aa");
+	var y=document.getElementById("pq");
+	var z=document.getElementById("pp");
+	if(x.className==="xyz" || y.className==="abc" || z.className==="pqr")
+	{
+		x.className="xyz";
+		y.className+=" rr";
+		z.className+=" rr";
+	}
+}
+function myfunv()
+{
+	var x=document.getElementById("aa");
+	var y=document.getElementById("pq");
+	var z=document.getElementById("pp");
+	if(x.className==="xyz" || y.className==="abc" || z.className==="pqr")
+	{
+		x.className+=" rr";
+		y.className="abc";
+		z.className+=" rr";
+	}
+}
+function myfuna()
+{
+	var x=document.getElementById("aa");
+	var y=document.getElementById("pq");
+	var z=document.getElementById("pp");
+	if(x.className==="xyz" || y.className==="abc" || z.className==="pqr")
+	{
+		x.className+=" rr";
+		y.className+=" rr";
+		z.className="pqr";
+	}
+}
+
+</script>
